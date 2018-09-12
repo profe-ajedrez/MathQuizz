@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Title</title>
+
+    <link rel="stylesheet" href="assets/css/estilo.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+</head>
+<body class="azulmedianoche">
+
+    <div class="container">
+        <div class="row">
+            <div class="toolbar">
+                <div class="row margin-top-10">
+                    
+                </div>
+            </div>
+            <div class="col m12 colm">
+                <div class="">
+
+                    <div class="contenido padding-top-50 center">
+                        <div class="numero-1">
+                            <p>HA ocurrido un error inesperado. intente actualizar la aplicación.</p>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+    <script src="assets/lib/vendor/jquery.js"></script>
+    <script src="assets/lib/local/settings.js"></script>
+    <script src="assets/lib/local/utils.js"></script>
+    <script>
+        $(function() {
+
+            let num1 = generateNumber(1, 499);
+            let num2 = generateNumber(1, 499);
+            let digits1 = decomposeNumber(num1);
+            let digits2 = decomposeNumber(num2);
+
+            loadNumberToContainer(digits1, '.numero-1', numeros);
+            loadOperator('.operador', operatorsPath, 'plus.png');
+            loadNumberToContainer(digits2, '.numero-2', numeros);
+            loadOperator('.barrita', operatorsPath, 'barra.png');
+            loadNumberToContainer([0, 0, 0], '.resultado', numeros);
+        });
+    </script>
+</body>
+</html>

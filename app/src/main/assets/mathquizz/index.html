@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Title</title>
+
+    <link rel="stylesheet" href="assets/css/estilo.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <script src="file:///android_asset/mathquizz/assets/lib/vendor/jquery.js"></script>
+    <script src="file:///android_asset/mathquizz/assets/lib/local/settings.js"></script>
+    <script src="file:///android_asset/mathquizz/assets/lib/local/utils.js"></script>
+</head>
+<body class="azulmedianoche">
+
+    <div class="container">
+        <div class="row">
+            <div class="toolbar">
+                <div class="row margin-top-10">
+                    <div class="left">
+                        <p id="animated-holder" class="boogaloo"><span id="animated">MATH QUIZZ</span></p>
+                    </div>
+                    <div class="right">
+                        <img src="assets/img/gui/buttons/reload.svg" />
+                    </div>
+                    <div class="right">
+                        <img src="assets/img/gui/buttons/sonido.svg" />
+                    </div>
+                    <div class="right">
+                        <img src="assets/img/gui/buttons/facebook.svg" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="col m12 colm">
+                <div class="pizarra">
+
+                    <div class="contenido padding-top-50 center">
+                        <div class="numero-1">
+
+                        </div>
+                        <div class="operador padding-top-bottom-10">
+                        </div>
+                        <div class="numero-2">
+
+                        </div>
+                        <div class="barrita padding-top-bottom-5">
+
+                        </div>
+                        <div class="resultado">
+
+                        </div>
+                        <div class="control-up">
+                            <img class="rotate-180" src="assets/img/gui/buttons/button-down-idle.svg" />
+                            <img class="rotate-180" src="assets/img/gui/buttons/button-down-idle.svg" />
+                            <img class="rotate-180" src="assets/img/gui/buttons/button-down-idle.svg" />
+                        </div>
+                        <div class="control-up">
+                            <img class="" src="assets/img/gui/buttons/button-down-idle.svg" />
+                            <img class="" src="assets/img/gui/buttons/button-down-idle.svg" />
+                            <img class="" src="assets/img/gui/buttons/button-down-idle.svg" />
+                        </div>
+                        <div class="check-me">
+                            <img class="bloque center" src="assets/img/gui/buttons/button-check-me-idle.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+
+    <script>
+        $(function() {
+
+            let num1 = generateNumber(1, 499);
+            let num2 = generateNumber(1, 499);
+            let digits1 = decomposeNumber(num1);
+            let digits2 = decomposeNumber(num2);
+
+            loadNumberToContainer(digits1, '.numero-1', numeros);
+            loadOperator('.operador', operatorsPath, 'plus.png');
+            loadNumberToContainer(digits2, '.numero-2', numeros);
+            loadOperator('.barrita', operatorsPath, 'barra.png');
+            loadNumberToContainer([0, 0, 0], '.resultado', numeros);
+        });
+    </script>
+</body>
+</html>
